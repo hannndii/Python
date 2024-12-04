@@ -23,7 +23,6 @@ t2 = {
     "Kursi_Film_C" : ["A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4", "C1", "C2", "C3", "C4", "D1", "D2", "D3", "D4"]
 }
 
-
 t3 = { 
     "ID" : "01",
     "Lokasi":"Braga XXI",
@@ -50,7 +49,7 @@ riwayat = {
 }
 
 film_reviews = {
-    "Film A": {"ratings": [5, 4], "reviews": ["Bagus sekali!", "Cukup menghibur"]},
-    "Film B": {"ratings": [3, 2], "reviews": ["Kurang menarik", "Cerita membosankan"]},
-    "Film C": {"ratings": [], "reviews": []}
+    "Mission Impossible: Dead Reckoning": {"ratings": [5, 4], "reviews": ["Bagus sekali!", "Cukup menghibur"]},
+    "Indiana Jones 5B": {"ratings": [3, 2], "reviews": ["Kurang menarik", "Cerita membosankan"]},
+    "Oppenheimer": {"ratings": [], "reviews": []}
 }

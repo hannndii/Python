@@ -70,24 +70,22 @@ def message():
 
 def pilih_theater():
     barrier()
-    list_lokasi = dic_theater.lok_theater['Lokasi']
-   
+    list_lokasi = dic_theater["lokasi"]  # Mengakses lokasi dari dictionary
     print('- - - - Theater Yang Tersedia - - - -')
     time.sleep(1)
-    for i in range(len(list_lokasi)):
-        print(i+1,'- ', list_lokasi[i])
+    for i, lokasi in enumerate(list_lokasi, start=1):
+        print(f"{i} - {lokasi}")
     pilih = int(input('Pilih lokasi: '))
+
     if 1 <= pilih <= len(list_lokasi):
         theater_pilihan = list_lokasi[pilih - 1]  # Lokasi yang dipilih pengguna
-        temp_film = pilih_film(theater_pilihan)  # Memilih film
-        temp_tayang = pilih_jam_tayang(theater_pilihan, temp_film)
-        no_kursi = daftar_kursi()  # Memilih kursi
+        temp_film = pilih_film()  # Memilih film
+        no_kursi = daftar_kursi(temp_film)  # Memilih kursi
         temp_bayar = bayar_film()  # Melakukan pembayaran
-        info_resi(temp_film, temp_tayang, theater_pilihan, no_kursi, temp_bayar)  # Menampilkan resi
+        info_resi(temp_film, theater_pilihan, no_kursi, temp_bayar)  # Menampilkan resi
 
         dic_theater.riwayat['List'].append({
             "film": temp_film,
-            "jam tayang" : temp_tayang,
             "lokasi": theater_pilihan,
             "kursi": no_kursi,
             "pembayaran": temp_bayar,
@@ -96,105 +94,66 @@ def pilih_theater():
     else:
         print("Pilihan tidak valid")
 
-def pilih_film(lokasi_terpilih):
-    barrier()
-
-    # Memetakan lokasi ke data film dan jadwal
-    if lokasi_terpilih == "Transmart Buah Batu XXI":
-        film_list = dic_theater.t1['Film']
-    elif lokasi_terpilih == "Summarecon Mall Bandung XXI":
-        film_list = dic_theater.t2['Film']
-    elif lokasi_terpilih == "Braga XXI":
-        film_list = dic_theater.t3['Film']
-    else:
-        print("Lokasi tidak valid.")
-        return None
-
-    # Menampilkan daftar film
-    print("= Film Yang Sedang Tayang =")
-    for i, film in enumerate(film_list, start=1):
-        print(f"{i} - {film}")
-
-    # Memilih film
-    pilih_f = int(input("Pilih film: "))
-    if 1 <= pilih_f <= len(film_list):
-        return film_list[pilih_f - 1]  # Mengembalikan nama film yang dipilih
-    else:
-        print("Pilihan tidak valid")
-        return pilih_film(lokasi_terpilih)
-
-def pilih_jam_tayang(lokasi_terpilih, film):
-    barrier()
-
-    # Memetakan lokasi ke data jadwal berdasarkan film
-    if lokasi_terpilih == "Transmart Buah Batu XXI":
-        film_schedule = dic_theater.t1[film]
-    elif lokasi_terpilih == "Summarecon Mall Bandung XXI":
-        film_schedule = dic_theater.t2[film]
-    elif lokasi_terpilih == "Braga XXI":
-        film_schedule = dic_theater.t3[film]
-    else:
-        print("Lokasi tidak valid.")
-        return None
-
-    # Menampilkan jadwal tayang film
-    print(f"= Jadwal Tayang untuk {film} =")
-    for i, jadwal in enumerate(film_schedule, start=1):
-        print(f"{i} - {jadwal}")
-
-    # Memilih jadwal tayang
-    pilih_j = int(input("Pilih jadwal tayang: "))
-    if 1 <= pilih_j <= len(film_schedule):
-        return film_schedule[pilih_j - 1]  # Mengembalikan jadwal tayang yang dipilih
-    else:
-        print("Pilihan tidak valid")
-        return pilih_jam_tayang(lokasi_terpilih, film)
-
-def select_film_schedule(jadwal_film):
-    print("= Jadwal Film =")
-    for i, jadwal in enumerate(jadwal_film, start=1):
-        print(f"{i} - {jadwal}")
+def pilih_film():
+    if current_theater is None:
+        print("Pilih lokasi theater terlebih dahulu.")
+        pilih_lokasi()
     
+    print("Film yang tersedia:")
+    films = list(current_theater["films"].keys())
+    for i, film in enumerate(films, start=1):
+        print(f"{i}. {film}")
+    pilihan_film = int(input("Masukkan pilihan film: ")) - 1
+    if 0 <= pilihan_film < len(films):
+        film_terpilih = films[pilihan_film]
+        print("Jadwal tersedia:")
+        jadwal = current_theater["films"][film_terpilih]
+        for i, waktu in enumerate(jadwal, start=1):
+            print(f"{i}. {waktu}")
+        pilihan_jadwal = int(input("Pilih jadwal tayang: ")) - 1
+        if 0 <= pilihan_jadwal < len(jadwal):
+            return film_terpilih, jadwal[pilihan_jadwal]
+        else:
+            print("Pilihan jadwal tidak valid.")
+    else:
+        print("Pilihan film tidak valid.")
+    return pilih_film()
+
+
+def select_film_schedule(film_schedule):
+    for i in range(len(film_schedule)):
+        print(i+1, "- ", film_schedule[i])
     pilih_jam = int(input("Pilih jam tayang: "))
-    if 1 <= pilih_jam <= len(jadwal_film):
-        return jadwal_film[pilih_jam - 1]
+    if 1 <= pilih_jam <= len(film_schedule):
+        return film_schedule[pilih_jam - 1]
     else:
         print("Pilihan tidak valid")
-        return select_film_schedule(jadwal_film)
+        return select_film_schedule(film_schedule)
 
-def daftar_kursi():
-    barrier()
-    kursiA = dic_theater.t1['Kursi_Film_A']
-
-    print("= Kursi Yang Tersedia =")
-    current_row = ""
-    for i, k in enumerate(kursiA):
-        if k[0] != current_row:
-            if current_row != "":
-                print()  # Pindah ke baris baru
-            current_row = k[0]
-        print(f"{i+1}. {k}", end=" \t")
-    print()
-
-    pilih_kursi = int(input("Pilih kursi: "))
-    if 1 <= pilih_kursi <= len(kursiA):
-        return kursiA[pilih_kursi - 1]
+def daftar_kursi(film):
+    seats = current_theater["seats"][film]
+    print("Kursi yang tersedia:")
+    for i, kursi in enumerate(seats, start=1):
+        print(f"{i}. {kursi}")
+    pilihan_kursi = int(input("Pilih kursi: ")) - 1
+    if 0 <= pilihan_kursi < len(seats):
+        return seats[pilihan_kursi]
     else:
-        print("Pilihan tidak valid")
-        return daftar_kursi()
+        print("Pilihan kursi tidak valid.")
+        return daftar_kursi(film)
 
 
-def info_resi(nama_film, tayang, lokasi, no_kursi, type_bayar):
+def info_resi(nama_film, lokasi, no_kursi, type_bayar):
     current_time = time.localtime()
     barrier()
 
-    print("- - - - - - - DETAIL PEMBAYARAN - - - - - - -")
+    print(" DETAIL PEMBAYARAN")
     print(f"Nama Film: {nama_film}")
-    print(f"Jam Tayang: {tayang}")
     print(f"Lokasi Tayang: {lokasi}")
     print(f"Waktu Pemesanan: {current_time.tm_mday}/{current_time.tm_mon}/{current_time.tm_year}")
     print(f"Nomor Kursi: {no_kursi}")
     print(f"Tipe Pembayaran: {type_bayar}")
+    print("\n")
     barrier()
     print("TERIMAKASIH ATAS PEMBELIAN NYA")
     input("Tekan Enter untuk kembali...")
@@ -236,14 +195,8 @@ def lihat_transaksi():
     else:
         print("= = = RIWAYAT TRANSAKSI = = =")
         for i, transaksi in enumerate(dic_theater.riwayat['List'], start=1):
-            print("- - - - - - - - - - - - - -")
-            print(f"Film: {transaksi['film']}") 
-            print(f"Jam Tayang: {transaksi['jam tayang']}")
-            print(f"Lokasi:  {transaksi['lokasi']}")
-            print(f"Kursi: {transaksi['kursi']}")
-            print(f"Pembayaran: {transaksi['pembayaran']}")
-            print(f"Waktu: {transaksi['waktu']}")
-            print("- - - - - - - - - - - - - -\n")
+            print(f"{i}. Film: {transaksi['film']}, Lokasi: {transaksi['lokasi']}, Kursi: {transaksi['kursi']}, "
+                  f"Pembayaran: {transaksi['pembayaran']}, Waktu: {transaksi['waktu']}")
     input("Tekan Enter untuk kembali...")
     time.sleep(3)
     
@@ -270,86 +223,59 @@ def pilih_lokasi():
         print("Pilihan tidak valid.")
 
 def update_jadwal():
-    global current_theater
     if current_theater is None:
-        barrier()
-        print("Silakan pilih lokasi teater terlebih dahulu.")
+        print("Pilih lokasi theater terlebih dahulu.")
         pilih_lokasi()
-        return
 
-    barrier()
-    print("- - - - - - - UPDATE JADWAL - - - - - - -")
-    film_list = current_theater["Film"]
+    films = list(current_theater["films"].keys())
     print("Film tersedia:")
-    for i, film in enumerate(film_list, start=1):
+    for i, film in enumerate(films, start=1):
         print(f"{i}. {film}")
-    
-    pilihan_film = int(input("Pilih film yang ingin diupdate jadwalnya: "))
-    if 1 <= pilihan_film <= len(film_list):
-        film = film_list[pilihan_film - 1]
-        jadwal = current_theater[film]
-        print(f"Jadwal saat ini untuk {film}:")
-        for i, jam in enumerate(jadwal, start=1):
-            print(f"{i}. {jam}")
-        
-        print("\n1. Tambah Jadwal")
-        print("2. Hapus Jadwal")
-        pilihan = int(input("Pilih aksi: "))
-        
-        if pilihan == 1:
-            jadwal_baru = input("Masukkan jadwal baru (format HH:MM - HH:MM): ")
-            jadwal.append(jadwal_baru)
-            print(f"Jadwal berhasil ditambahkan untuk {film}.")
-        elif pilihan == 2:
-            hapus_jadwal = int(input("Pilih jadwal yang ingin dihapus: "))
-            if 1 <= hapus_jadwal <= len(jadwal):
-                jadwal.pop(hapus_jadwal - 1)
-                print(f"Jadwal berhasil dihapus untuk {film}.")
-            else:
-                print("Pilihan tidak valid.")
+    pilihan = int(input("Pilih film untuk update jadwal: ")) - 1
+    if 0 <= pilihan < len(films):
+        film = films[pilihan]
+        print("Jadwal saat ini:", current_theater["films"][film])
+        print("1. Tambah jadwal")
+        print("2. Hapus jadwal")
+        opsi = int(input("Pilih opsi: "))
+        if opsi == 1:
+            jadwal_baru = input("Masukkan jadwal baru: ")
+            current_theater["films"][film].append(jadwal_baru)
+            print("Jadwal berhasil ditambahkan.")
+        elif opsi == 2:
+            hapus_jadwal = int(input("Pilih jadwal untuk dihapus: ")) - 1
+            if 0 <= hapus_jadwal < len(current_theater["films"][film]):
+                current_theater["films"][film].pop(hapus_jadwal)
+                print("Jadwal berhasil dihapus.")
         else:
-            print("Pilihan tidak valid.")
+            print("Opsi tidak valid.")
     else:
         print("Pilihan tidak valid.")
 
 def update_film():
-    global current_theater
-    
-    if current_theater is None:
-        barrier()
-        print("Silakan pilih lokasi teater terlebih dahulu.")
-        pilih_lokasi()
-        return
-
-    barrier()
-    print("= Update Film =")
-    film_list = current_theater["Film"]
-    print("Film tersedia:")
-    for i, film in enumerate(film_list, start=1):
-        print(f"{i}. {film}")
-    
-    print("\n1. Tambah Film")
-    print("2. Hapus Film")
-    pilihan = int(input("Pilih aksi: "))
-    
-    if pilihan == 1:
+    print("1. Tambah film baru")
+    print("2. Hapus film yang ada")
+    opsi = int(input("Pilih opsi: "))
+    if opsi == 1:
         film_baru = input("Masukkan nama film baru: ")
-        if film_baru in film_list:
-            print("Film sudah tersedia.")
-        else:
-            film_list.append(film_baru)
-            current_theater[film_baru] = []
-            print(f"Film {film_baru} berhasil ditambahkan.")
-    elif pilihan == 2:
-        hapus_film = int(input("Pilih film yang ingin dihapus: "))
-        if 1 <= hapus_film <= len(film_list):
-            film_hapus = film_list.pop(hapus_film - 1)
-            current_theater.pop(film_hapus, None)
-            print(f"Film {film_hapus} berhasil dihapus.")
+        jadwal_baru = input("Masukkan jadwal film baru (pisahkan dengan koma): ").split(", ")
+        current_theater["films"][film_baru] = jadwal_baru
+        current_theater["seats"][film_baru] = [f"{film_baru[0]}{i}" for i in range(1, 6)]
+        print("Film baru berhasil ditambahkan.")
+    elif opsi == 2:
+        films = list(current_theater["films"].keys())
+        print("Film tersedia:")
+        for i, film in enumerate(films, start=1):
+            print(f"{i}. {film}")
+        hapus_film = int(input("Pilih film untuk dihapus: ")) - 1
+        if 0 <= hapus_film < len(films):
+            del current_theater["films"][films[hapus_film]]
+            del current_theater["seats"][films[hapus_film]]
+            print("Film berhasil dihapus.")
         else:
             print("Pilihan tidak valid.")
     else:
-        print("Pilihan tidak valid.")
+        print("Opsi tidak valid.")
 
 def update_kursi():
     global current_theater
@@ -415,11 +341,9 @@ def beri_rating():
     ulasan = input("Tulis ulasan: ")
     dic_theater.film_reviews[film_terpilih]["reviews"].append(ulasan)
     print("Terima kasih atas ulasan Anda!")
-    barrier()
 
 def lihat_rating():
-    barrier()
-    print("- - - - - - - - REVIEW FILM TAHUN 2024 - - - - - - - -")
+    print("Film yang tersedia:")
     for film, data in dic_theater.film_reviews.items():
         avg_rating = sum(data["ratings"]) / len(data["ratings"]) if data["ratings"] else 0
         print(f"Film: {film}, Rating rata-rata: {avg_rating:.1f}")
@@ -427,6 +351,5 @@ def lihat_rating():
         for review in data["reviews"]:
             print(f"- {review}")
         print()
-        barrier()
 
 # ======================= END ALGORITMA =========================
