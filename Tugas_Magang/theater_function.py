@@ -7,16 +7,8 @@ current_theater = None
 
 # ================ ALGORITMA  =================
 def barrier():
-    print('= = = = = = = = = = = = = = = = = = = = = = \n')
+    print('= = = = = = = = = = = = = = = = = = = = = = ')
 
-def login():
-    print('- - - - - - - SELAMAT DATANG DI THEATERKU - - - - - - -')
-    username_user = str(input("Username: "))
-    pass_user = str(input("Password: "))
-    if pass_user == "Admin" and username_user == "Admin":
-        menu_admin()
-    else:
-        menu_pelanggan()
 
 def menu_admin():
     # untuk Admin
@@ -44,7 +36,8 @@ def menu_pelanggan():
     # Untuk Pelanggan
     barrier()
     while True:
-        print('SELAMAT DATANG DI THEATERKU')
+        print('\t SELAMAT DATANG DI THEATERKU')
+        print("- - - - - - - - - - - - - - - - - - - - -")
         print('1. Pesan Tiket')
         print('2. Lihat Daftar Transaksi')
         print('3. Lihat Rating dan Ulasan Film')
@@ -118,7 +111,7 @@ def pilih_film(lokasi_terpilih):
     # Memilih film
     pilih_f = int(input("Pilih film: "))
     if 1 <= pilih_f <= len(film_list):
-        return film_list[pilih_f - 1]  # Mengembalikan nama film yang dipilih
+        return film_list[pilih_f - 1]  
     else:
         print("Pilihan tidak valid")
         return pilih_film(lokasi_terpilih)
@@ -145,7 +138,7 @@ def pilih_jam_tayang(lokasi_terpilih, film):
     # Memilih jadwal tayang
     pilih_j = int(input("Pilih jadwal tayang: "))
     if 1 <= pilih_j <= len(film_schedule):
-        return film_schedule[pilih_j - 1]  # Mengembalikan jadwal tayang yang dipilih
+        return film_schedule[pilih_j - 1]  
     else:
         print("Pilihan tidak valid")
         return pilih_jam_tayang(lokasi_terpilih, film)
@@ -171,7 +164,7 @@ def daftar_kursi():
     for i, k in enumerate(kursiA):
         if k[0] != current_row:
             if current_row != "":
-                print()  # Pindah ke baris baru
+                print()  
             current_row = k[0]
         print(f"{i+1}. {k}", end=" \t")
     print()
@@ -369,11 +362,19 @@ def update_kursi():
     pilihan_film = int(input("Pilih film untuk update kursi: "))
     if 1 <= pilihan_film <= len(film_list):
         film = film_list[pilihan_film - 1]
+        if pilihan_film == 1:
+            kursi_film_list = current_theater['Kursi_Film_A'] 
+        elif pilihan_film == 2:
+            kursi_film_list = current_theater['Kursi_Film_B'] 
+        elif pilihan_film == 3:
+            kursi_film_list = current_theater['Kursi_Film_C']
+
         kursi_key = f"Kursi_{film.replace(' ', '_')}"
-        kursi_list = current_theater[kursi_key]
+        kursi_list = kursi_film_list
         print(f"Kursi saat ini untuk {film}: {', '.join(kursi_list)}")
         
-        print("\n1. Tambah Kursi")
+        print("\n- - - - - - - - - - Perintah Yang Tersedia - - - - - - - - - -")
+        print("1. Tambah Kursi")
         print("2. Hapus Kursi")
         pilihan = int(input("Pilih aksi: "))
         
@@ -429,4 +430,4 @@ def lihat_rating():
         print()
         barrier()
 
-# ======================= END ALGORITMA =========================
+# ======================= ENDPROGRAM =========================
