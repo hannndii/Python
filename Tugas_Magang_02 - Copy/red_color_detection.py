@@ -1,5 +1,6 @@
 import numpy as np
-import cv2
+import cv2 
+# CAMERA VISION
 
 def show_color_info(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:  
@@ -16,7 +17,6 @@ def show_color_info(event, x, y, flags, param):
             print("Warna yang terdeteksi: Ungu")
         else:
             print("Warna Tidak Teridentifikasi")
-
 
 cap = cv2.VideoCapture(0)
 
