@@ -1,0 +1,75 @@
+{
+    "parameters": [
+        {
+            "expr": "10",
+            "name": "RodDiameter",
+            "value": "10"
+        },
+        {
+            "expr": "20",
+            "name": "BoomDiameter",
+            "value": "20"
+        },
+        {
+            "expr": "512",
+            "name": "BoomLength",
+            "value": "512"
+        },
+        {
+            "expr": "0",
+            "name": "RPosition",
+            "value": "0"
+        },
+        {
+            "expr": "334",
+            "name": "RLength",
+            "value": "334"
+        },
+        {
+            "expr": "326.4",
+            "name": "AntenaLength",
+            "value": "326.4"
+        },
+        {
+            "expr": "166",
+            "name": "DipolePost",
+            "value": "166"
+        },
+        {
+            "expr": "218",
+            "name": "DirPost1",
+            "value": "218"
+        },
+        {
+            "expr": "343",
+            "name": "DirPost2",
+            "value": "343"
+        },
+        {
+            "expr": "492",
+            "name": "DirPost3",
+            "value": "492"
+        },
+        {
+            "expr": "315",
+            "name": "DirLength1",
+            "value": "315"
+        },
+        {
+            "expr": "312",
+            "name": "DirLength2",
+            "value": "312"
+        },
+        {
+            "expr": "309",
+            "name": "DirLength3",
+            "value": "309"
+        },
+        {
+            "expr": "5",
+            "name": "Gap",
+            "value": "5"
+        }
+    ],
+    "version": 1
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Planner Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .dashboard {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .info-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        .status {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        @media (max-width: 600px) {
+            .dashboard {
+                padding: 10px;
+            }
+            .info-box {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Mission Planner Dashboard</h1>
+        <div class="info-box">
+            <h2>Drone Status</h2>
+            <p>Altitude: <span id="altitude">-</span> meters</p>
+            <p>Latitude: <span id="latitude">-</span></p>
+            <p>Longitude: <span id="longitude">-</span></p>
+            <p>Heading: <span id="heading">-</span> degrees</p>
+            <p>Ground Speed: <span id="groundspeed">-</span> m/s</p>
+            <p>Status: <span id="status" class="status">-</span></p>
+            <p>Armed: <span id="armed">-</span></p>
+            <p>Mode: <span id="mode">-</span></p>
+        </div>
+        <button onclick="updateData()">Refresh Data</button>
+    </div>
+
+    <script>
+        function updateData() {
+            fetch('/get_drone_data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('altitude').textContent = data.altitude.toFixed(2);
+                    document.getElementById('latitude').textContent = data.latitude.toFixed(6);
+                    document.getElementById('longitude').textContent = data.longitude.toFixed(6);
+                    document.getElementById('heading').textContent = data.heading.toFixed(2);
+                    document.getElementById('groundspeed').textContent = data.groundspeed.toFixed(2);
+                    document.getElementById('status').textContent = data.armed ? "Armed" : "Disarmed";
+                    document.getElementById('armed').textContent = data.armed ? "Yes" : "No";
+                    document.getElementById('mode').textContent = data.mode || "Unknown";
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Update data every 1 second
+        setInterval(updateData, 1000);
+        // Initial update
+        updateData();
+    </script>
+</body>
+</html>

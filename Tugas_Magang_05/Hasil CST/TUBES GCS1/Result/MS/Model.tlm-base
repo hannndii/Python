@@ -1,0 +1,20 @@
+!data_id
+
+(include) Model.boundary.tlm-inc
+external_boundaries
+  (use) include_external_boundaries
+
+(include) Model.output.tlm-inc
+output
+  (use) simulation_parameters
+
+# job excitation definitions
+(include) Model.job.tlm-inc
+
+(include) Model.settings.tlm-inc
+!settings
+  (use) include_settings
+
+
+# stop criteria definitions
+(include) Model.stop.tlm-inc

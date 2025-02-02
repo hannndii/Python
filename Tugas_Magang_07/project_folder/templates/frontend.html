@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drone Telemetry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .status-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .status-item {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .status-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .status-value {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        /* #map {
+            height: 300px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 20px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mission PLanner Lite</h1>
+        
+        <div class="status-box">
+            <div class="status-item">
+                <div class="status-label">Mode Copter</div>
+                <div class="status-value" id="mode">--</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Ketinggian</div>
+                <div class="status-value" id="altitude">-- m</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Kecepatan</div>
+                <div class="status-value" id="speed">-- m/s</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Baterai</div>
+                <div class="status-value" id="battery">-- %</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Heading</div>
+                <div class="status-value" id="heading">-- °</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Status</div>
+                <div class="status-value" id="armed">--</div>
+            </div>
+        </div>
+        
+        <!-- <div id="map"></div> -->
+    </div>
+
+    <script>
+        function updateTelemetry(data) {
+            document.getElementById('mode').textContent = data.mode;
+            document.getElementById('altitude').textContent = data.altitude.toFixed(1) + " m";
+            document.getElementById('speed').textContent = data.speed.toFixed(1) + " m/s";
+            document.getElementById('battery').textContent = data.battery + " %";
+            document.getElementById('heading').textContent = data.heading.toFixed(0) + " °";
+            document.getElementById('armed').textContent = data.armed ? "ARMED" : "DISARMED";
+        }
+
+        async function fetchData() {
+            try {
+                const response = await fetch('http://localhost:5000/drone_data');
+                const data = await response.json();
+                updateTelemetry(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        setInterval(fetchData, 1000);
+        fetchData();
+    </script>
+</body>
+</html>

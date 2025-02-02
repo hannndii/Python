@@ -1,0 +1,100 @@
+{
+    "parameters": [
+        {
+            "expr": "10",
+            "name": "RodDiameter",
+            "value": "10"
+        },
+        {
+            "expr": "20",
+            "name": "BoomDiameter",
+            "value": "20"
+        },
+        {
+            "expr": "833-Konstanta",
+            "name": "BoomLength",
+            "value": "733"
+        },
+        {
+            "expr": "334",
+            "name": "RLength",
+            "value": "334"
+        },
+        {
+            "expr": "0",
+            "name": "RPost",
+            "value": "0"
+        },
+        {
+            "expr": "166",
+            "name": "DipolePost",
+            "value": "166"
+        },
+        {
+            "expr": "330",
+            "name": "AntenaLength",
+            "value": "330"
+        },
+        {
+            "expr": "290.02",
+            "name": "DirLength1",
+            "value": "290.02"
+        },
+        {
+            "expr": "218",
+            "name": "DirPost1",
+            "value": "218"
+        },
+        {
+            "expr": "285.87",
+            "name": "DirLength2",
+            "value": "285.87"
+        },
+        {
+            "expr": "343",
+            "name": "DirPost2",
+            "value": "343"
+        },
+        {
+            "expr": "9",
+            "name": "Gap",
+            "value": "9"
+        },
+        {
+            "expr": "100",
+            "name": "Konstanta",
+            "value": "100"
+        },
+        {
+            "expr": "DirPost2+126",
+            "name": "DirPost3",
+            "value": "469"
+        },
+        {
+            "expr": "281.46",
+            "name": "DirLength3",
+            "value": "281.46"
+        },
+        {
+            "expr": "DirPost3+127",
+            "name": "DirPost4",
+            "value": "596"
+        },
+        {
+            "expr": "277.33",
+            "name": "DirLength4",
+            "value": "277.33"
+        },
+        {
+            "expr": "DirPost4+128",
+            "name": "DirPost5",
+            "value": "724"
+        },
+        {
+            "expr": "273.74",
+            "name": "DirLength5",
+            "value": "273.74"
+        }
+    ],
+    "version": 1
+}

@@ -1,0 +1,29 @@
+{
+   "execution": {
+      "classname": "SMAPowerByEmagHPCFrame",
+      "libname": "SMAPowerByEmagUI"
+   },
+   "inputVariables": [
+      {
+         "name": "pDipole",
+         "type": "float",
+         "value": 329.45
+      },
+      {
+         "name": "Diameter",
+         "type": "float",
+         "value": 8.0
+      },
+      {
+         "name": "Gap",
+         "type": "float",
+         "value": 5.0
+      },
+      {
+         "name": "Tuning",
+         "type": "float",
+         "value": 30.0
+      }
+   ],
+   "outputVariables": []
+}

@@ -1,0 +1,35 @@
+{
+    "parameters": [
+        {
+            "expr": "329.45+Tuning",
+            "name": "pDipole",
+            "value": "299.45"
+        },
+        {
+            "expr": "pDipole/2",
+            "name": "pAntena",
+            "value": "149.725"
+        },
+        {
+            "expr": "8",
+            "name": "Diameter",
+            "value": "8"
+        },
+        {
+            "expr": "5",
+            "name": "Gap",
+            "value": "5"
+        },
+        {
+            "expr": "-30",
+            "name": "Tuning",
+            "value": "-30"
+        },
+        {
+            "expr": "2",
+            "name": "newD",
+            "value": "2"
+        }
+    ],
+    "version": 1
+}

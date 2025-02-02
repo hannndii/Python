@@ -1,0 +1,21 @@
+3300 0 2 0           
+20 CST MICROWAVE STUDIO 14 ACIS 33.0.1 NT 24 Sat Jan 11 19:00:18 2025 
+1 9.9999999999999995e-07 1e-10 
+T @77 TCEMC3KFSV2DJ7SVGHDPYUSRZ7PVTCP8HANUMEPBUCM3KPPWECRVKJ643CUCQ87BBDS3Q8P4QB5VE 
+edge $2 -1 -1 $-1 $3 -3.5527136788005009e-15 $3 6.2831853071795827 $-1 $4 forward @7 unknown F #
+edge $5 -1 -1 $-1 $6 3.5527136788005009e-15 $6 6.2831853071795898 $-1 $7 forward @7 unknown F #
+name_attrib-gen-attrib $-1 -1 $8 $-1 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 ncomponent1:Dipole #
+vertex $-1 -1 -1 $-1 $0 $9 #
+ellipse-curve $-1 -1 -1 $-1 2.5 166.00000000000003 0 1 0 -0 -5.6843418860808015e-14 -5.6843418860808015e-14 8 1 I I #
+name_attrib-gen-attrib $-1 -1 $10 $-1 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 ncomponent1:Dipole #
+vertex $-1 -1 -1 $-1 $1 $11 #
+ellipse-curve $-1 -1 -1 $-1 -2.5 166.00000000000003 0 -1 -0 -0 -5.6843418860808015e-14 -5.6843418860808015e-14 8 1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $12 $2 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+point $-1 -1 -1 $-1 2.5 166 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $13 $5 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+point $-1 -1 -1 $-1 -2.5 166 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $14 $8 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $15 $10 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $12 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $13 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 9 #
+End-of-ACIS-data 

@@ -1,0 +1,2 @@
+dronekit-sitl copter --home=-6.9699855,107.6292157,2,50
+mavproxy.py --master tcp:127.0.0.1:5760 --out 127.0.0.1:14550 --out 127.0.0.1:14551

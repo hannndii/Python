@@ -1,0 +1,39 @@
+{
+   "execution": {
+      "classname": "SMAPowerByEmagHPCFrame",
+      "libname": "SMAPowerByEmagUI"
+   },
+   "inputVariables": [
+      {
+         "name": "PanjangReflector",
+         "type": "float",
+         "value": 334.0
+      },
+      {
+         "name": "DipolePost",
+         "type": "float",
+         "value": 166.0
+      },
+      {
+         "name": "DirPos",
+         "type": "float",
+         "value": 218.0
+      },
+      {
+         "name": "DirLength",
+         "type": "float",
+         "value": 215.0
+      },
+      {
+         "name": "Gap",
+         "type": "float",
+         "value": 5.0
+      },
+      {
+         "name": "Konstanta",
+         "type": "float",
+         "value": 3.0
+      }
+   ],
+   "outputVariables": []
+}

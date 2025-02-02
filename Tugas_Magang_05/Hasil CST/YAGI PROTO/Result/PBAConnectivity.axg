@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSTAuxiliaryGeometry version="20170928">
+  <Objects>
+    <Object name="Components\component1:Dipole" id="1">
+      <LineSet points="0 0 0 0 0 0 4.5 170 -7 0 0 0 0 0 0 8.375 170 -10 8.375 170 -7 8.375 166 -7 0 0 0 4.5 170 -14.4275742 8.375 166 -14.4275742 8.375 170 -14.4275742 0 0 0 4.5 162 -7 8.375 162 -10 8.375 162 -7 2.25 162 -14.4275742 2.25 166 -14.4275742 0 0 0 2.25 162 -10 4.5 162 -14.4275742 2.25 166 -7 2.25 162 -7 2.25 170 -14.4275742 2.25 170 -10 8.375 162 -14.4275742 2.25 170 -7" lines="2 6 5 6 6 7 7 15 9 23 10 11 11 5 11 9 13 15 14 25 15 14 16 17 17 23 19 16 20 16 21 22 22 13 22 19 23 24 24 26 25 10 25 20 26 2 26 21" material="$ConnectedMaterial$"/>
+    </Object>
+    <Object name="Ports\port1" id="2">
+      <LineSet points="0 0 0 0 0 0 4.5 170 -7 0 0 0 0 0 0 8.375 170 -10 8.375 170 -7 8.375 166 -7 0 0 0 4.5 170 -14.4275742 8.375 166 -14.4275742 8.375 170 -14.4275742 0 0 0 4.5 162 -7 8.375 162 -10 8.375 162 -7 2.25 162 -14.4275742 2.25 166 -14.4275742 0 0 0 2.25 162 -10 4.5 162 -14.4275742 2.25 166 -7 2.25 162 -7 2.25 170 -14.4275742 2.25 170 -10 8.375 162 -14.4275742 2.25 170 -7" lines="2 6 5 6 6 7 7 15 9 23 10 11 11 5 11 9 13 15 14 25 15 14 16 17 17 23 19 16 20 16 21 22 22 13 22 19 23 24 24 26 25 10 25 20 26 2 26 21" material="$ConnectedMaterial$"/>
+      <LineSet points="0 0 0 0 0 0 0 0 0 -4.5 162 -7 -2.25 162 -10 0 0 0 -2.25 166 -7 -2.25 162 -7 0 0 0 -4.5 170 -7 -2.25 170 -10 -2.25 170 -7 -8.375 162 -10 0 0 0 -8.375 166 -7 -8.375 162 -7 -8.375 170 -10 -8.375 170 -7 -8.375 166 -14.4275742 -8.375 170 -14.4275742 0 0 0 -4.5 170 -14.4275742 -2.25 166 -14.4275742 -2.25 170 -14.4275742 -4.5 162 -14.4275742 -2.25 162 -14.4275742 -8.375 162 -14.4275742" lines="3 7 4 25 6 7 7 4 9 11 10 11 11 6 12 26 14 15 15 3 15 12 16 17 17 9 17 14 18 19 19 16 21 19 22 23 23 10 23 21 24 26 25 22 25 24 26 18" material="$ConnectedMaterial$"/>
+    </Object>
+    <Object name="Components\component1:Dipole [lump 2]" id="3">
+      <LineSet points="0 0 0 0 0 0 0 0 0 -4.5 162 -7 -2.25 162 -10 0 0 0 -2.25 166 -7 -2.25 162 -7 0 0 0 -4.5 170 -7 -2.25 170 -10 -2.25 170 -7 -8.375 162 -10 0 0 0 -8.375 166 -7 -8.375 162 -7 -8.375 170 -10 -8.375 170 -7 -8.375 166 -14.4275742 -8.375 170 -14.4275742 0 0 0 -4.5 170 -14.4275742 -2.25 166 -14.4275742 -2.25 170 -14.4275742 -4.5 162 -14.4275742 -2.25 162 -14.4275742 -8.375 162 -14.4275742" lines="3 7 4 25 6 7 7 4 9 11 10 11 11 6 12 26 14 15 15 3 15 12 16 17 17 9 17 14 18 19 19 16 21 19 22 23 23 10 23 21 24 26 25 22 25 24 26 18" material="$ConnectedMaterial$"/>
+    </Object>
+    <Object name="Components\component1:D1" id="4"/>
+    <Object name="Components\component1:D2" id="5"/>
+    <Object name="Components\component1:D3" id="6"/>
+    <Object name="Components\component1:D4" id="7"/>
+    <Object name="Components\component1:D5" id="8"/>
+    <Object name="Components\component1:Reflector" id="9"/>
+    <Object name="Components\component1:boom" id="10"/>
+  </Objects>
+  <Materials/>
+  <Groups>
+    <Group name="Groupcomponent1 Dipole" type="Connectivity" ID="1">
+      <Item name="Components\component1:Dipole" type="solid" id="1"/>
+      <Item name="Ports\port1" type="solid" id="2"/>
+    </Group>
+    <Group name="Groupcomponent1 Dipole [lump 2]" type="Connectivity" ID="1">
+      <Item name="Components\component1:Dipole [lump 2]" type="solid" id="3"/>
+      <Item name="Ports\port1" type="solid" id="2"/>
+    </Group>
+    <Group name="Isolators" type="Isolator" ID="1"/>
+    <Group name="Unconsidered" type="Isolator" ID="1">
+      <Item name="Components\component1:D1" type="solid" id="4"/>
+      <Item name="Components\component1:D2" type="solid" id="5"/>
+      <Item name="Components\component1:D3" type="solid" id="6"/>
+      <Item name="Components\component1:D4" type="solid" id="7"/>
+      <Item name="Components\component1:D5" type="solid" id="8"/>
+      <Item name="Components\component1:Reflector" type="solid" id="9"/>
+      <Item name="Components\component1:boom" type="solid" id="10"/>
+    </Group>
+  </Groups>
+</CSTAuxiliaryGeometry>

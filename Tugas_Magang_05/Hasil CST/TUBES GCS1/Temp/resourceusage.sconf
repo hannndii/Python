@@ -1,0 +1,14 @@
+FeatureKeywords:string:monitor:farfield:single freq, block:type:saved:MWSSCHEM, DELETERESULTS:PARAMETRIC, modeler:variables:rebuild, modeler:variables:fastrebuild, modeler:model:anchorpoints, la:macromodel, la:macromodel:nmaxthreads:8, mesh:param:assertfailed, modeler:model:anchorpoints:saving, modeler:hidfile:unique_ids, SMatrix:DSNBWC:16, DELETERESULTS:M000, DELETERESULTS:M0P0, mesh::background::boolean, meshloading:problem_class_only, mesh:workflow:nru, mesh:workflow:srf2vol, mesh:workflow:boolean, mesh:workflow:boolean:advanced, mesh:workflow:cad2srf, visualization:mesh_view:legacy_engine, DELETERESULTS:0000, TableAccess:CDeltaCalculatorSParameter:table_deleted:false, modeler:hidfile:hidden_elements, mcalc:Workflow:Facets-QQ-GEX, mcalc:facets:qq, mcalc:facets:qq:PP, mcalc:facets:qq:PP:fb-multi-thread-22, mcalc:facets:qq:acceleration:multi-thread, mcalc:facets:qq:mesh-manager-ACIS:indexed, mcalc:fpba:facets:mat-attribute:background-material, mcalc:fpba:facets:mat-attribute:normal, mcalc:fpba:facets:mat-attribute:pec, mcalc:fpba:facets:mat-attribute:rho, mcalc:fpba:facets:mat-attribute:surface-impedance, mcalc:fpba:facets:mat-attribute:vacuum, mcalc:fpba:facets:save, mcalc:fpba:facets:shape-attribute:background-shape, mcalc:fpba:facets:shape-attribute:boundary, mcalc:fpba:facets:shape-attribute:lump-shape, mcalc:fpba:facets:shape-attribute:solid, mcalc:mesher:automatic, mcalc:mode:facets, mcalc:port_analyzer:version_2, meshline:hex:new, mcalc:Workflow:Facets-QQ-GEX-TLM, mcalc:facets:qq:TLM, mcalc:facets:qq:TLM:fb-multi-thread-22, mcalc:mcalc:gex:qqfacettergex, EXTENSION:solver-control:mesh-control:setup-via-callbacks-and-base-pointers, modeler:variables:fullrebuild
+LastWorkflowState:string:tetmesh:started
+matrixcalc-acis-facets/MaxResidentSizeMiB:int:1552
+matrixcalc-acis-facets/Runtime:double:0.0591021
+matrixcalc-mcalc-prepare/MaxResidentSizeMiB:int:1552
+matrixcalc-mcalc-prepare/Runtime:double:0.0151229
+matrixcalc-mode-facets-rendering/MaxResidentSizeMiB:int:1552
+matrixcalc-mode-facets-rendering/Runtime:double:12.558
+matrixcalc/MaxResidentSizeMiB:int:1720
+solver_hf_tlm/InitialFreePhysicalInMB:int:7983
+solver_hf_tlm/MaxResidentSizeInMB:int:24
+solver_hf_tlm/MaxResidentSizeMiB:int:5
+solver_hf_tlm/MinFreePhysicalInMB:int:7983
+---

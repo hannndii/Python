@@ -1,0 +1,16 @@
+2025-01-22 21:00:27   *** Warning ***
+
+                      The length on grid (10 [mm]) of the discrete edge port "1" is longer than half
+                      the minimum simulation wavelength (0.666205 [mm]).The assumption of a uniformly
+                      distributed element does not hold any more and does not consider wave
+                      propagation phenomena along the element. The distributed update schema could
+                      therefore lead to inaccurate results.  More...
+
+                      ------------------------------------------------------------------------------
+2025-01-22 21:00:27   *** Error ***
+
+                      Simulation setup for 452.6 billion mesh cells requires: 
+                      	- MPI simulation setup with at least 248 cluster nodes
+                         Simulation cannot be started.
+
+                      ------------------------------------------------------------------------------

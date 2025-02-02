@@ -1,0 +1,13 @@
+{
+   "Author": "tupog",
+   "Comment": "",
+   "Last Problem Type": "High Frequency",
+   "Last Solver Type": "HF Time Domain",
+   "Last Solver Type Abb": "t",
+   "Mesh Cells": "532,224",
+   "Mesh Type": "Hexahedral",
+   "Modeler Unique ID": "5:untitled_0.cst?cfb7048308c5d3f63b2e59b8ad60f7e5?9883:numberofparameters=12:port=1>mode=1>zre=0>zim=0:::gap?dirpost2?dirlength2?dirpost1?dirlength1?antenalength?dipolepost?rpost?rlength?boomlength?boomdiameter?roddiameter",
+   "ProjectVersion": "'# MWS Version: Version 2024.1 - Oct 16 2023 - ACIS 33.0.1 -",
+   "Results": "Time Domain: S-Parameter",
+   "Version": "3"
+}

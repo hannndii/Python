@@ -1,0 +1,163 @@
+2025-01-11 19:26:49   Defined reference frequency for open boundary condition (450 MHz) is larger
+                      than the lowest relevant system frequency (monitor at 400 MHz).
+                      Please check the Settings for PML Boundary (Simulation > Settings > Boundary
+                      Conditions > Open Boundary) to ensure accurate monitor results for the lowest
+                      frequency of interest. More...
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:26:49   The following farfield monitor(s) have been adjusted to model box [-183.81,
+                      183.81, -5.80974, 223.81, -5.80974, 5.80974]:
+                        farfield (f=400), farfield (f=433), farfield (f=500).
+                      For further information please check the page "Special Solver Parameters -
+                      Solver" in the Online Help.
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:26:50   
+                      Solver started at: 2025-01-11 19:26:50 +0700
+
+                        Module:  Time Domain: S-Parameter (Win 64)
+                        Version: 2024.0 Release from 2023-09-01 (change 1164796)
+
+2025-01-11 19:26:50   
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:26:50   
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:26:50   ======================================================================
+                       Solver cycle: 1
+                      ======================================================================
+
+                      Stimulation at discrete port 1 
+
+
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:26:50   Units settings: 
+
+                        Dimensions: mm
+                        Frequency:  MHz
+                        Time:       ns
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:26:50   The dispersive material update [Automatic] will be performed using the "Standard" update schema
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:27:17   The following discrete edge port is connected to metal material:
+                      	1
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:27:17   Mesh statistics:
+
+                         Hexahedral mesh type: Perfect Boundary Approximation (PBA)
+                            Version: default
+
+                         Parallelization type: domain decomposition
+                            Number of parallel working threads: 6
+                            Number of calculation domains used: 8
+
+                         Used point accuracy enhancement value: 0.00%.
+                         Acceleration mode: CPU
+                         PBA fill limit: 97.69% (inverse)
+
+2025-01-11 19:27:21   Boundary conditions: 
+
+                        YZsymmetry: none
+                        XZsymmetry: none
+                        XYsymmetry: none
+
+                        Xmin: expanded open, 4 Layer, depth 128.621 mm
+                        Xmax: expanded open, 4 Layer, depth 128.621 mm
+
+                        Ymin: expanded open, 4 Layer, depth 128.621 mm
+                        Ymax: expanded open, 4 Layer, depth 128.621 mm
+
+                        Zmin: expanded open, 4 Layer, depth 128.621 mm
+                        Zmax: expanded open, 4 Layer, depth 128.621 mm
+
+                        PML-Type: Convolution PML
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:27:21   Frequency settings: 
+
+                        Fmin:         400
+                        Fmax:         500
+                        Nfsteps(lin): 1001
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:27:21   Field update statistics:
+
+                        Number of components in total: 	1449381
+                        Number of lossy metal components:	8800
+
+                      Subcycling state:      			Automatically deactivated
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:27:21   Port: 1
+
+2025-01-11 19:27:21     Discrete element, reference impedance = 50 Ohm
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:28:43   
+                      --------------------------------------------------------------------------------
+2025-01-11 19:28:43   Steady state energy criterion met, solver finished successfully.
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:28:43   Frequency domain results normalized to default signal.
+
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:28:43   
+                        ----------------------------------------------------------------------------
+                                            Peak memory used (kB)         Free physical memory (kB) 
+                                                                          At begin     Minimum      
+                        ----------------------------------------------------------------------------
+                        CAD preparation     15516                         9445900      9445900      
+                        Matrices calc.      417148                        9044921      7653320      
+                        Solver run total    125312                        9461076      9057156      
+                        ----------------------------------------------------------------------------
+
+                      --------------------------------------------------------------------------------
+                      Solver Statistics:
+
+                        Hardware:
+                           Computer name:                 	HANDY 
+
+                           Number of CPU threads:               8
+                           Hardware info:                  	Hardware Accelerator Device not activated
+
+                        Number of mesh cells:             	235104
+                        Excitation duration:              	7.10909750e+001 ns 
+                        Calculation time for excitation:  	0 	s
+                        Number of calculated pulse widths:	1.06662 
+                        Steady state accuracy limit:      	-40	dB 
+                        Simulated number of time steps:   	38988 
+                        Maximum number of time steps:     	731059 
+                        Time step width:
+                           without subcycles:             	1.944874042e-003 ns
+                           used:                          	1.944874042e-003 ns
+
+                        CAD preparation time:             	0      	s
+                        Matrix calculation time:          	27 	s
+                        Solver setup time:                	7 	s
+                        Solver loop time:                 	76 	s
+                        Solver post-processing time:      	2 	s
+                                                          	------------
+                        Total solver time:                	112 	s  ( = 0 h, 1 m, 52 s )
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:28:43   
+                        Total solver time (all cycles):      	112    	s  ( = 0 h, 1 m, 52 s )
+                        Solver initialization and clean-up:  	1      	s
+                                                             	------------
+                        Total simulation time:               	113    	s  ( = 0 h, 1 m, 53 s )
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:28:43   Solver finished at: 2025-01-11 19:28:43 +0700
+
+
+
+                      ------------------------------------------------------------------------------
+2025-01-11 19:28:46   Creating parametric 1D results for Run ID 4
+
+                      ------------------------------------------------------------------------------

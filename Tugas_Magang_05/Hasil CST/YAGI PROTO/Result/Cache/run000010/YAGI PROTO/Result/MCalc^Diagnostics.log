@@ -1,0 +1,9 @@
+{25124} >2025-00-23 13:17:32.00580< ParaControl_AMD64-1xN @ HANDY:  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                                    Setup of TST curls failed, details:
+                                                                    TST setup failed @ (24.3804 | 162 | 10) w( 47 | 54 | 16 ): CalculateECurl(): unexpected split TST type
+                                                                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+{25124} >2025-00-23 13:17:52.00632< ParaControl_AMD64-1xN @ HANDY:  xxxxxxxxxxx
+                                                                    Resplitting
+                                                                    xxxxxxxxxxx
+

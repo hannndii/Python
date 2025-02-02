@@ -1,0 +1,79 @@
+{
+   "execution": {
+      "classname": "SMAPowerByEmagHPCFrame",
+      "libname": "SMAPowerByEmagUI"
+   },
+   "inputVariables": [
+      {
+         "name": "RodDiameter",
+         "type": "float",
+         "value": 10.0
+      },
+      {
+         "name": "BoomDiameter",
+         "type": "float",
+         "value": 20.0
+      },
+      {
+         "name": "RLength",
+         "type": "float",
+         "value": 336.14
+      },
+      {
+         "name": "RPost",
+         "type": "float",
+         "value": 0.0
+      },
+      {
+         "name": "DipolePost",
+         "type": "float",
+         "value": 166.0
+      },
+      {
+         "name": "DirLength1",
+         "type": "float",
+         "value": 290.02
+      },
+      {
+         "name": "DirPost1",
+         "type": "float",
+         "value": 218.0
+      },
+      {
+         "name": "DirLength2",
+         "type": "float",
+         "value": 285.87
+      },
+      {
+         "name": "DirPost2",
+         "type": "float",
+         "value": 343.0
+      },
+      {
+         "name": "Gap",
+         "type": "float",
+         "value": 9.0
+      },
+      {
+         "name": "Konstanta",
+         "type": "float",
+         "value": 20.0
+      },
+      {
+         "name": "DirLength3",
+         "type": "float",
+         "value": 281.46
+      },
+      {
+         "name": "DirLength4",
+         "type": "float",
+         "value": 277.33
+      },
+      {
+         "name": "DirLength5",
+         "type": "float",
+         "value": 273.74
+      }
+   ],
+   "outputVariables": []
+}

@@ -1,0 +1,70 @@
+{
+    "parameters": [
+        {
+            "expr": "10",
+            "name": "RodDiameter",
+            "value": "10"
+        },
+        {
+            "expr": "20",
+            "name": "BoomDiameter",
+            "value": "20"
+        },
+        {
+            "expr": "400",
+            "name": "BoomLength",
+            "value": "400"
+        },
+        {
+            "expr": "334",
+            "name": "RLength",
+            "value": "334"
+        },
+        {
+            "expr": "0",
+            "name": "RPost",
+            "value": "0"
+        },
+        {
+            "expr": "166",
+            "name": "DipolePost",
+            "value": "166"
+        },
+        {
+            "expr": "326.4",
+            "name": "AntenaLength",
+            "value": "326.4"
+        },
+        {
+            "expr": "315",
+            "name": "DirLength1",
+            "value": "315"
+        },
+        {
+            "expr": "218",
+            "name": "DirPost1",
+            "value": "218"
+        },
+        {
+            "expr": "312",
+            "name": "DirLength2",
+            "value": "312"
+        },
+        {
+            "expr": "343",
+            "name": "DirPost2",
+            "value": "343"
+        },
+        {
+            "expr": "5",
+            "name": "Gap",
+            "value": "5"
+        },
+        {
+            "expr": "0",
+            "name": "Konstanta",
+            "value": "0"
+        }
+    ],
+    "version": 1
+}

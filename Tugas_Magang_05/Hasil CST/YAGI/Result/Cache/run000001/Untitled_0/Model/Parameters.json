@@ -1,0 +1,40 @@
+{
+    "parameters": [
+        {
+            "expr": "334",
+            "name": "PanjangReflector",
+            "value": "334"
+        },
+        {
+            "expr": "166",
+            "name": "DipolePost",
+            "value": "166"
+        },
+        {
+            "expr": "218",
+            "name": "DirPos",
+            "value": "218"
+        },
+        {
+            "expr": "215",
+            "name": "DirLength",
+            "value": "215"
+        },
+        {
+            "expr": "5",
+            "name": "Diameter",
+            "value": "5"
+        },
+        {
+            "expr": "5",
+            "name": "Gap",
+            "value": "5"
+        },
+        {
+            "expr": "3",
+            "name": "Konstanta",
+            "value": "3"
+        }
+    ],
+    "version": 1
+}
